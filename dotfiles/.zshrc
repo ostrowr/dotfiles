@@ -22,6 +22,7 @@ export BULLETTRAIN_PROMPT_ORDER=(
 
 export BULLETTRAIN_VIRTUALENV_BG=red
 export BULLETTRAIN_GIT_BG=green
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -75,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-export EDITOR='emacs'
+export EDITOR='code'
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -90,14 +91,13 @@ export EDITOR='emacs'
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+alias grep="ggrep"
+eval $(thefuck --alias)
+
+export GOPATH=$HOME/go
+
+export PATH=$GOPATH/bin:$PATH
+export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

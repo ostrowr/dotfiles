@@ -1,0 +1,10 @@
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+[".oh-my-zsh/custom/themes/bullet-train.zsh-theme"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/caiogondim/bullet-train.zsh/master/bullet-train.zsh-theme"
+    exact = true
+    stripComponents = 1

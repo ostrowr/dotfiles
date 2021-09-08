@@ -4,8 +4,8 @@ sourceDir = "{{ .chezmoi.sourceDir }}"
 [data]
   name = "Robbie Ostrow"
   codespaces = {{ $codespaces }}
-{{- if $codespaces }}{{/* Codespaces dotfiles setup is non-interactive, so set an email address */}}
-  email = "robbie@vanta.com"
+{{- if not stdinIsATTY }}{{/* Codespaces dotfiles setup is non-interactive, so set an email address */}}
+  email = "ostrowr@gmail.com"
 {{- else }}{{/* Interactive setup, so prompt for an email address */}}
   email = "{{ promptString "email" }}"
 {{- end }}

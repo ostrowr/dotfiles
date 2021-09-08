@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ex
 
 {{ if eq .chezmoi.os "linux" -}}
 sudo apt-get update
@@ -22,10 +21,12 @@ brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "cowsay"
 brew "fortune"
 brew "fzf"
-brew "fzf"
 brew "git"
-brew "thefuck"
 brew "go"
+brew "htop"
+brew "jq"
+brew "thefuck"
+brew "tmux"
 EOF
 
 # Install completion for fzf

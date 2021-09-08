@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+set -ex
+
 {{ if eq .chezmoi.os "linux" -}}
-sudo apt update
+sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install \
   cowsay \
   fortune \

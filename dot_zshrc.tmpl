@@ -96,5 +96,5 @@ export PATH="/usr/local/sbin:$PATH"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 {{ else if eq .chezmoi.os "darwin" -}}
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 {{ end -}}

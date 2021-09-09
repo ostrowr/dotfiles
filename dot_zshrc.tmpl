@@ -1,10 +1,8 @@
 fortune | cowsay
 
-# Path to oh-my-zsh installation.
-export ZSH={{ .chezmoi.homeDir }}/.oh-my-zsh
-
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bullet-train"
+# antigen setup
+source {{ .chezmoi.homeDir }}/.antigen.zsh
+antigen init {{ .chezmoi.homeDir }}/.antigenrc
 
 export BULLETTRAIN_PROMPT_ORDER=(
   virtualenv
@@ -60,9 +58,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 

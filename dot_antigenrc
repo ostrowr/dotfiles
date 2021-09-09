@@ -2,18 +2,21 @@
 antigen use oh-my-zsh
 
 # Load bundles from the default repo (oh-my-zsh)
-antigen bundle git
+export NVM_COMPLETION=true
+antigen bundle lukechilds/zsh-nvm
 antigen bundle command-not-found
 antigen bundle docker
+antigen bundle git
 antigen bundle ssh-agent
+antigen bundle thefuck
 
 # Load bundles from external repos
-antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Select theme
-antigen theme "caiogondim/bullet-train.zsh"
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 # Tell Antigen that you're done
 antigen apply

@@ -16,7 +16,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Select theme
-antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+antigen theme romkatv/powerlevel10k
 
 # Tell Antigen that you're done
 antigen apply

@@ -7,7 +7,7 @@ Using [chezmoi](https://github.com/twpayne/chezmoi) to manage them across platfo
 To initalize a new machine, run
 
 ```
-sudo sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply ostrowr
+bash <(curl -sL "https://git.io/JuRJB")
 ```
 
 To update dotfiles, run

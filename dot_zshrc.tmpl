@@ -12,21 +12,6 @@ fi
 source {{ .chezmoi.homeDir }}/.antigen.zsh
 antigen init {{ .chezmoi.homeDir }}/.antigenrc
 
-# ZSH environment variables
-export BULLETTRAIN_PROMPT_ORDER=(
-  virtualenv
-  aws
-  go
-  git
-  context
-  dir
-  status
-  cmd_exec_time
-)
-
-export BULLETTRAIN_VIRTUALENV_BG=red
-export BULLETTRAIN_GIT_BG=green
-
 # Don't autoupdate zsh; chezmoi will update plugins for us
 DISABLE_AUTO_UPDATE="true"
 
@@ -50,6 +35,9 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 alias grep="ggrep"
 alias time="gtime"
+
+# Add a todo by running `todo.sh add <task>` or just `t a <task>`
+alias t="todo.sh"
 
 eval $(thefuck --alias)
 alias emacs="emacs -nw"

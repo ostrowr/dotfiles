@@ -42,9 +42,13 @@ alias t="todo.sh"
 eval $(thefuck --alias)
 alias emacs="emacs -nw"
 
+# Source z
+. /usr/local/etc/profile.d/z.sh
+
+# Update path
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
-
+export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 {{ if eq .chezmoi.os "linux" -}}

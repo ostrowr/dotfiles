@@ -33,8 +33,6 @@ fi
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-alias grep="ggrep"
-alias time="gtime"
 
 # Add a todo by running `todo.sh add <task>` or just `t a <task>`
 alias t="todo.sh"
@@ -42,8 +40,11 @@ alias t="todo.sh"
 eval $(thefuck --alias)
 alias emacs="emacs -nw"
 
+# browse the current branch in github
+alias browse="gh browse -b $(git rev-parse --abbrev-ref HEAD)"
+
 # Source z
-. /usr/local/etc/profile.d/z.sh
+# . /usr/local/etc/profile.d/z.sh
 
 # Update path
 export GOPATH=$HOME/go
@@ -56,6 +57,9 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 {{ else if eq .chezmoi.os "darwin" -}}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias grep="ggrep"
+alias time="gtime"
 {{ end -}}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

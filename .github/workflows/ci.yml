@@ -29,6 +29,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr
+      - run: yes | sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr --no-tty 
       - name: chezmoi data
         run: ./bin/chezmoi data

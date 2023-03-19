@@ -13,7 +13,7 @@ jobs:
         CODESPACES: true
     steps:
       - uses: actions/checkout@v2
-      - run: ./install.sh
+      - run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr
       - name: chezmoi data
         run: '"$HOME/.local/bin/chezmoi" data'
 
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: ./install.sh
+      - run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr
       - name: chezmoi data
         run: '"$HOME/.local/bin/chezmoi" data'
 
@@ -29,6 +29,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - run: ./install.sh
+      - run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr
       - name: chezmoi data
         run: '"$HOME/.local/bin/chezmoi" data'

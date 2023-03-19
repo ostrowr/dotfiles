@@ -13,12 +13,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install \
 pip3 install thefuck --user
 
 {{ else if eq .chezmoi.os "darwin" -}}
-# Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # Install useful brew packages
 brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+brew "python@3.11"
 brew "asciinema"
+brew "chezmoi"
 brew "cowsay"
 brew "fortune"
 brew "fzf"
@@ -27,7 +28,7 @@ brew "git"
 brew "go"
 brew "htop"
 brew "jq"
-brew "python"
+brew "starship"
 brew "thefuck"
 brew "tldr"
 brew "tmux"
@@ -36,8 +37,12 @@ brew "tree"
 brew "watch"
 brew "z"
 cask "amethyst"
+cask "font-meslo-lg-nerd-font"
+cask "visual-studio-code"
+cask "warp"
 EOF
 
 # Install completion for fzf
 $(brew --prefix)/opt/fzf/install --all
 {{ end -}}
+

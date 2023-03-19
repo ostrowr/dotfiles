@@ -44,6 +44,7 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 {{ if eq .chezmoi.os "linux" -}}
 source /usr/share/doc/fzf/examples/key-bindings.zsh

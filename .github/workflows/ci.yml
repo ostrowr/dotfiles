@@ -12,23 +12,23 @@ jobs:
       env:
         CODESPACES: true
     steps:
-      - uses: actions/checkout@v2
-      - run: ./install.sh
+      - uses: actions/checkout@v3
+      - run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr
       - name: chezmoi data
-        run: '"$HOME/.local/bin/chezmoi" data'
+        run: ./bin/chezmoi data
 
   check-debian:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: ./install.sh
+      - uses: actions/checkout@v3
+      - run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr
       - name: chezmoi data
-        run: '"$HOME/.local/bin/chezmoi" data'
+        run: ./bin/chezmoi data
 
   check-macos:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: ./install.sh
+      - uses: actions/checkout@v3
+      - run: yes | sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr --no-tty 
       - name: chezmoi data
-        run: '"$HOME/.local/bin/chezmoi" data'
+        run: ./bin/chezmoi data

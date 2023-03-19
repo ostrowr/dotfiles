@@ -36,9 +36,6 @@
 	changed = yellow bold
 	untracked = red bold
 
-[commit]
-	gpgsign = false
-
 [credential]
 	helper = osxkeychain
 

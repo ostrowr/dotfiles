@@ -18,16 +18,22 @@ pip3 install thefuck --user
 
 # Install useful brew packages
 brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 brew "asciinema"
+brew "chezmoi"
 brew "cowsay"
+brew "emacs"
 brew "fortune"
 brew "fzf"
 brew "gh"
 brew "git"
+brew "gnupg"
 brew "go"
 brew "htop"
 brew "jq"
-brew "python"
+brew "python@3.11"
+brew "starship"
 brew "thefuck"
 brew "tldr"
 brew "tmux"
@@ -35,9 +41,14 @@ brew "todo-txt"
 brew "tree"
 brew "watch"
 brew "z"
+cask "1password"
 cask "amethyst"
+cask "font-meslo-lg-nerd-font"
+cask "visual-studio-code"
+cask "warp"
 EOF
 
 # Install completion for fzf
 $(brew --prefix)/opt/fzf/install --all
 {{ end -}}
+

@@ -13,6 +13,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install \
 pip3 install thefuck --user
 
 {{ else if eq .chezmoi.os "darwin" -}}
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Install useful brew packages
 brew bundle --no-lock --file=/dev/stdin <<EOF
 tap "homebrew/bundle"

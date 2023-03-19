@@ -2,6 +2,4 @@
 
 set -eax
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install chezmoi
-chezmoi init --apply ostrowr
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ostrowr

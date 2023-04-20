@@ -47,7 +47,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 {{ if eq .chezmoi.os "linux" -}}
-
+export PATH="/usr/games:$PATH"
 {{ else if eq .chezmoi.os "darwin" -}}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 {{ end -}}

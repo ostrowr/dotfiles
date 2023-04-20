@@ -33,6 +33,9 @@ alias emacs="emacs -nw"
 # browse the current branch in github
 alias browse='gh browse -b $(git rev-parse --abbrev-ref HEAD)'
 
+# add github copilot cli aliases
+eval "$(github-copilot-cli alias -- "$0")"
+
 # Source z
 # . /usr/local/etc/profile.d/z.sh
 

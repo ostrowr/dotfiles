@@ -7,7 +7,6 @@ antigen bundle lukechilds/zsh-nvm
 antigen bundle command-not-found
 antigen bundle docker
 antigen bundle git
-antigen bundle ssh-agent
 antigen bundle thefuck
 
 # Load bundles from external repos

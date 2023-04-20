@@ -1,6 +1,8 @@
+{{- if not stdinIsATTY }}{{/* don't set default github user in codespaces */}}
 [user]
 	name = Robbie Ostrow
 	email = ostrowr@gmail.com
+{{- end }}
 
 [core]
 	editor = emacs -nw

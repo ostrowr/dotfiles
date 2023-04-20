@@ -1,6 +1,7 @@
 #!/bin/bash
 
 {{ if eq .chezmoi.os "linux" -}}
+{{- if stdinIsATTY }}
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install \
   cowsay \
@@ -11,6 +12,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install \
   python3-setuptools
 
 pip3 install thefuck --user
+{{- end }}
 
 {{ else if eq .chezmoi.os "darwin" -}}
 # Install homebrew

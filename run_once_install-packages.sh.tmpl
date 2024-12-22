@@ -10,7 +10,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install \
   python3-pip \
   python3-setuptools
 
-pip3 install thefuck --user
+pip install thefuck
 
 {{ else if eq .chezmoi.os "darwin" -}}
 # Install homebrew

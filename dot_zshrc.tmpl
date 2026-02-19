@@ -23,18 +23,39 @@ fi
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-
-# Add a todo by running `todo.sh add <task>` or just `t a <task>`
-alias t="todo.sh"
-
-eval $(thefuck --alias)
 alias emacs="emacs -nw"
+
+# Git & GitHub aliases
+alias gmom='git fetch origin master && git merge origin/master'
+alias gprv='gh pr view -w'
+alias gprc='gh pr create -w'
+alias gcam='git commit -a --amend'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcm='git commit -m'
+alias gca='git commit -a -m'
+alias gst='git status -sb'
+alias glg='git log --oneline --graph --decorate -20'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gaa='git add --all'
+alias gpo='git push origin'
+alias gpom='git push origin master'
+alias gpf='git push --force-with-lease'
+alias gpl='git pull --rebase'
+alias gundo='git reset --soft HEAD^'
+alias gclean='git clean -fd'
+alias gprl='gh pr list'
+alias gprd='gh pr diff'
+gcbpr() { git checkout "$(gh pr view --json headRefName -q .headRefName)"; }
+alias gsync='git fetch --all --prune'
+alias gundo-merge='git reset --merge ORIG_HEAD'
+alias gbranch-size='git rev-list --left-right --count origin/HEAD...HEAD'
+alias gtop='cd "$(git rev-parse --show-toplevel)"'
+alias gs='git status -uno'
 
 # browse the current branch in github
 alias browse='gh browse -b $(git rev-parse --abbrev-ref HEAD)'
-
-# add github copilot cli aliases
-eval "$(github-copilot-cli alias -- "$0")"
 
 # Source z
 # . /usr/local/etc/profile.d/z.sh

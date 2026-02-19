@@ -14,8 +14,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install \
   bat
 
 
-pip install thefuck
-
 {{ else if eq .chezmoi.os "darwin" -}}
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

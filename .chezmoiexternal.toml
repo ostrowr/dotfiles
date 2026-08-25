@@ -1,5 +1,5 @@
 [".antigen.zsh"]
     type = "file"
-    url = "https://git.io/antigen"
+    url = "https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh"
     exact = true
     stripComponents = 1
